@@ -13,10 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/home', function () {
+    return view('home.home');
+});
+
 Route::get('/', function () {
     return view('home.home');
 });
 
+Route::get('/cursos', function () {
+    return view('home.cursos');
+});
+
+Route::get('/equipe', function () {
+    return view('home.equipe');
+});
+
+Route::get('/sobre', function () {
+    return view('home.sobre');
+});
+
+Route::get('/contato', function () {
+    return view('home.contato');
+});
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
